@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
@@ -18,6 +18,9 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         submitBtn.layer.cornerRadius = 5
         submitBtn.clipsToBounds = true
+        
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
 
@@ -41,6 +44,12 @@ class LoginVC: UIViewController {
         let imageVc = storyboard.instantiateViewController(withIdentifier: "ImageVC")
         appDelegate.window?.rootViewController = imageVc
         appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    //Hide keyboard when return key pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
