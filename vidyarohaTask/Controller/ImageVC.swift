@@ -26,7 +26,6 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     @IBAction func pickImageBtnPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
             
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum;
@@ -37,8 +36,27 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     }
     
     
+    @IBAction func logoutBtnPressed(_ sender: Any) {
+        //Clear user defaults
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: GlobalConstants.UserDefaultKeys.username)
+        defaults.synchronize()
+        setLoginVCAsRootVC()
+    }
+    
+    func setLoginVCAsRootVC(){
+        //Open login screen
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        appDelegate.window?.rootViewController = loginVc
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: nil)
+        //set button image
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             activityIndicator.startAnimating()
             profileImageBtn.setImage(pickedImage, for: .normal)

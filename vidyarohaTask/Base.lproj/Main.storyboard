@@ -19,7 +19,7 @@
         <!--LoginVC-->
         <scene sceneID="VRB-fr-3uI">
             <objects>
-                <viewController id="3h1-yD-6bd" customClass="LoginVC" customModule="vidyarohaTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="3h1-yD-6bd" customClass="LoginVC" customModule="vidyarohaTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YHY-q4-j0K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +83,9 @@
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitBtnPressed:" destination="3h1-yD-6bd" eventType="touchUpInside" id="1hd-1b-l2w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,15 +102,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZOf-H7-0Ky"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="uHb-MY-gf4" id="VUr-So-tcm"/>
+                        <outlet property="submitBtn" destination="c0u-Mv-GII" id="LtT-cg-mzB"/>
+                        <outlet property="userNameTextField" destination="8p0-QL-wOd" id="hFA-lG-i0n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGd-9a-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="921" y="-305"/>
         </scene>
         <!--ImageVC-->
         <scene sceneID="3Id-bf-ohE">
             <objects>
-                <viewController id="Jz5-DU-kJ4" customClass="ImageVC" customModule="vidyarohaTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageVC" id="Jz5-DU-kJ4" customClass="ImageVC" customModule="vidyarohaTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0N-Jr-WG5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +150,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAJ-G5-Elp" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="137.5" y="170" width="100" height="100"/>
+                                <rect key="frame" x="162.5" y="195" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lYQ-cX-QgB"/>
+                                    <constraint firstAttribute="width" constant="50" id="oee-Nf-0kj"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="0.0" green="0.81312173600000004" blue="0.83586543800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,17 +164,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-Oo-H9X">
-                                <rect key="frame" x="156" y="617" width="62" height="30"/>
-                                <state key="normal" title="LOGOUT"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-Oo-H9X">
+                                <rect key="frame" x="152" y="577" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Cyq-KJ-z7l"/>
+                                    <constraint firstAttribute="width" constant="70" id="eMK-l1-0XW"/>
+                                </constraints>
+                                <state key="normal" image="logout-power"/>
+                                <connections>
+                                    <action selector="logoutBtnPressed:" destination="Jz5-DU-kJ4" eventType="touchUpInside" id="B5X-9V-p3a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a7r-YP-EDI" firstAttribute="centerX" secondItem="v0N-Jr-WG5" secondAttribute="centerX" id="Geg-H2-LUp"/>
                             <constraint firstItem="a7r-YP-EDI" firstAttribute="top" secondItem="8rr-iL-gjZ" secondAttribute="top" constant="100" id="Hyb-H2-xTf"/>
-                            <constraint firstItem="DAJ-G5-Elp" firstAttribute="width" secondItem="a7r-YP-EDI" secondAttribute="width" constant="-100" id="JEE-14-VhK"/>
-                            <constraint firstItem="DAJ-G5-Elp" firstAttribute="height" secondItem="a7r-YP-EDI" secondAttribute="height" constant="-100" id="JzP-Vy-sN2"/>
                             <constraint firstItem="DAJ-G5-Elp" firstAttribute="centerY" secondItem="a7r-YP-EDI" secondAttribute="centerY" id="Tlo-iS-9Pu"/>
                             <constraint firstItem="ri3-TE-RbI" firstAttribute="leading" secondItem="8rr-iL-gjZ" secondAttribute="leading" id="Xld-MZ-ogZ"/>
                             <constraint firstItem="ri3-TE-RbI" firstAttribute="top" secondItem="8rr-iL-gjZ" secondAttribute="top" id="ZLD-L4-yCH"/>
@@ -183,4 +200,7 @@
             <point key="canvasLocation" x="1654" y="-305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logout-power" width="512" height="512"/>
+    </resources>
 </document>
