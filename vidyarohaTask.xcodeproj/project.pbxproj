@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C762015DA7F00B4CE61 /* AppDelegate.swift */; };
-		32A39C792015DA7F00B4CE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C782015DA7F00B4CE61 /* ViewController.swift */; };
+		32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C782015DA7F00B4CE61 /* LoginVC.swift */; };
 		32A39C7C2015DA7F00B4CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7A2015DA7F00B4CE61 /* Main.storyboard */; };
 		32A39C7E2015DA7F00B4CE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7D2015DA7F00B4CE61 /* Assets.xcassets */; };
 		32A39C812015DA7F00B4CE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7F2015DA7F00B4CE61 /* LaunchScreen.storyboard */; };
+		32DD46522015F06E005EF7C6 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DD46512015F06E005EF7C6 /* ImageVC.swift */; };
+		9908CA6A0D8A224AFAF28EDC /* Pods_vidyarohaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46988666C97AFDF7D3EB1E9B /* Pods_vidyarohaTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32A39C732015DA7F00B4CE61 /* vidyarohaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vidyarohaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A39C762015DA7F00B4CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32A39C782015DA7F00B4CE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32A39C782015DA7F00B4CE61 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		32A39C7B2015DA7F00B4CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32A39C7D2015DA7F00B4CE61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32A39C802015DA7F00B4CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32A39C822015DA7F00B4CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32DD46512015F06E005EF7C6 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		46988666C97AFDF7D3EB1E9B /* Pods_vidyarohaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vidyarohaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B76D75F815C2E37B857E63 /* Pods-vidyarohaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vidyarohaTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask.release.xcconfig"; sourceTree = "<group>"; };
+		9AD061B4E23CB05932CFF8A6 /* Pods-vidyarohaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vidyarohaTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9908CA6A0D8A224AFAF28EDC /* Pods_vidyarohaTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				32A39C752015DA7F00B4CE61 /* vidyarohaTask */,
 				32A39C742015DA7F00B4CE61 /* Products */,
+				89F7001172CF1FD89CCA079E /* Pods */,
+				AC1E1336EE39FD69A009A3AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +63,40 @@
 		32A39C752015DA7F00B4CE61 /* vidyarohaTask */ = {
 			isa = PBXGroup;
 			children = (
+				32A39C882015DAE000B4CE61 /* Controller */,
 				32A39C762015DA7F00B4CE61 /* AppDelegate.swift */,
-				32A39C782015DA7F00B4CE61 /* ViewController.swift */,
 				32A39C7A2015DA7F00B4CE61 /* Main.storyboard */,
 				32A39C7D2015DA7F00B4CE61 /* Assets.xcassets */,
 				32A39C7F2015DA7F00B4CE61 /* LaunchScreen.storyboard */,
 				32A39C822015DA7F00B4CE61 /* Info.plist */,
 			);
 			path = vidyarohaTask;
+			sourceTree = "<group>";
+		};
+		32A39C882015DAE000B4CE61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32A39C782015DA7F00B4CE61 /* LoginVC.swift */,
+				32DD46512015F06E005EF7C6 /* ImageVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89F7001172CF1FD89CCA079E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AD061B4E23CB05932CFF8A6 /* Pods-vidyarohaTask.debug.xcconfig */,
+				84B76D75F815C2E37B857E63 /* Pods-vidyarohaTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC1E1336EE39FD69A009A3AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46988666C97AFDF7D3EB1E9B /* Pods_vidyarohaTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32A39C852015DA7F00B4CE61 /* Build configuration list for PBXNativeTarget "vidyarohaTask" */;
 			buildPhases = (
+				4FDBDF8C1563C61292E6B5E7 /* [CP] Check Pods Manifest.lock */,
 				32A39C6F2015DA7E00B4CE61 /* Sources */,
 				32A39C702015DA7E00B4CE61 /* Frameworks */,
 				32A39C712015DA7E00B4CE61 /* Resources */,
+				7645FF07F0BA94E89205C2D6 /* [CP] Embed Pods Frameworks */,
+				44F822AC15723986D2D76464 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +169,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44F822AC15723986D2D76464 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FDBDF8C1563C61292E6B5E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vidyarohaTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7645FF07F0BA94E89205C2D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32A39C6F2015DA7E00B4CE61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32A39C792015DA7F00B4CE61 /* ViewController.swift in Sources */,
+				32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */,
 				32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */,
+				32DD46522015F06E005EF7C6 /* ImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +365,7 @@
 		};
 		32A39C862015DA7F00B4CE61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD061B4E23CB05932CFF8A6 /* Pods-vidyarohaTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +381,7 @@
 		};
 		32A39C872015DA7F00B4CE61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B76D75F815C2E37B857E63 /* Pods-vidyarohaTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
