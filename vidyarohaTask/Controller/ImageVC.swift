@@ -8,7 +8,6 @@
 
 import UIKit
 import NVActivityIndicatorView
-import Alamofire
 
 class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
@@ -62,31 +61,16 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             activityIndicator.startAnimating()
             profileImageBtn.setImage(pickedImage, for: .normal)
             //Upload image to server
-            uploadImage(image: pickedImage)
+            AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
+                self.activityIndicator.stopAnimating()
+                if success{
+                    print("Image upload successful")
+                }else{
+                    print("Image upload unsuccessful")
+                }
+            })
         }
     }
     
-    func uploadImage(image: UIImage){
-        let imgData = UIImageJPEGRepresentation(image, 0.2)!
-        let url = ""
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
-        }, to: url) { result in
-            self.activityIndicator.stopAnimating()
-            switch result {
-            case .success(let upload, _, _):
-                
-                upload.uploadProgress(closure: { (progress) in
-                    print("Upload Progress: \(progress.fractionCompleted)")
-                })
-                
-                upload.responseJSON { response in
-                    print(response.result.value)
-                }
-                
-            case .failure(let encodingError):
-                print(encodingError)
-            }
-        }
-    }
+    
 }
