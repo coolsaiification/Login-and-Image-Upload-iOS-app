@@ -10,14 +10,13 @@ import UIKit
 
 @IBDesignable class CurvedButton: UIButton{
     
-    @IBInspectable var cornerRadius: CGFloat = 5{
-        didSet{
-            self.setNeedsLayout()
-        }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setup()
     }
     
-    override func layoutSubviews() {
-        self.layer.cornerRadius = cornerRadius
+    func setup() {
+        self.layer.cornerRadius = 5
         self.clipsToBounds = true
     }
 }

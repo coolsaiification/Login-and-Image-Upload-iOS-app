@@ -20,12 +20,8 @@ class AuthService{
         }, to: url) { result in
             switch result {
             case .success(let upload, _, _):
-                upload.uploadProgress(closure: { (progress) in
-                    print("Upload Progress: \(progress.fractionCompleted)")
-                })
-                
                 upload.responseJSON { response in
-                    print(response.result.value)
+                    print(response.result.value ?? "")
                 }
                 completion(true)
             case .failure(let encodingError):
@@ -33,5 +29,6 @@ class AuthService{
                 completion(false)
             }
         }
+        completion(false)
     }
 }

@@ -64,7 +64,12 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             profileImageBtn.setImage(pickedImage, for: .normal)
             //Upload image to server
             AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
-                self.activityIndicator.stopAnimating()
+                //Delay for testing activity indicator
+                let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                }
+                RunLoop.current.add(timer, forMode: .commonModes)
                 if success{
                     print("Image upload successful")
                 }else{
