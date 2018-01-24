@@ -14,6 +14,7 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
 
     @IBOutlet weak var profileImageBtn:UIButton!
     @IBOutlet weak var activityIndicator:NVActivityIndicatorView!
+    @IBOutlet weak var tickImg: UIImageView!
     var imagePicker = UIImagePickerController()
     
     var gradientLayer: CAGradientLayer!
@@ -24,6 +25,7 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         profileImageBtn.clipsToBounds = true
         profileImageBtn.imageView?.contentMode = .scaleAspectFill
         activityIndicator.type = .ballClipRotate
+        tickImg.isHidden = true
     }
     
     @IBAction func pickImageBtnPressed(_ sender: Any) {
@@ -61,17 +63,15 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         //set button image
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             activityIndicator.startAnimating()
+            tickImg.isHidden = true
             profileImageBtn.setImage(pickedImage, for: .normal)
             //Upload image to server
             AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
-                //Delay for testing activity indicator
-                let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.isHidden = true
-                }
-                RunLoop.current.add(timer, forMode: .commonModes)
+                self.activityIndicator.stopAnimating()
+                
                 if success{
                     print("Image upload successful")
+                    self.tickImg.isHidden = false
                 }else{
                     print("Image upload unsuccessful")
                 }

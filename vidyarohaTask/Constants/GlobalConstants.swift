@@ -12,4 +12,7 @@ class GlobalConstants {
     struct UserDefaultKeys{
         static let username = "username"
     }
+    struct api{
+        static let uploadImage = "localhost:5000/uploadImage"
+    }
 }

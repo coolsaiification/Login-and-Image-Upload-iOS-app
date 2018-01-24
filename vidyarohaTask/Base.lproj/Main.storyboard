@@ -191,11 +191,19 @@
                                     <action selector="logoutBtnPressed:" destination="Jz5-DU-kJ4" eventType="touchUpInside" id="B5X-9V-p3a"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-green" translatesAutoresizingMaskIntoConstraints="NO" id="g0r-Cl-9xI">
+                                <rect key="frame" x="172" y="340" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jc4-KY-cZI"/>
+                                    <constraint firstAttribute="width" constant="30" id="uz4-Z3-F7a"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a7r-YP-EDI" firstAttribute="centerX" secondItem="v0N-Jr-WG5" secondAttribute="centerX" id="Geg-H2-LUp"/>
                             <constraint firstItem="a7r-YP-EDI" firstAttribute="top" secondItem="8rr-iL-gjZ" secondAttribute="top" constant="100" id="Hyb-H2-xTf"/>
+                            <constraint firstItem="g0r-Cl-9xI" firstAttribute="top" secondItem="a7r-YP-EDI" secondAttribute="bottom" constant="20" id="Tli-ux-4w7"/>
                             <constraint firstItem="DAJ-G5-Elp" firstAttribute="centerY" secondItem="a7r-YP-EDI" secondAttribute="centerY" id="Tlo-iS-9Pu"/>
                             <constraint firstItem="ri3-TE-RbI" firstAttribute="leading" secondItem="8rr-iL-gjZ" secondAttribute="leading" id="Xld-MZ-ogZ"/>
                             <constraint firstItem="ri3-TE-RbI" firstAttribute="top" secondItem="8rr-iL-gjZ" secondAttribute="top" id="ZLD-L4-yCH"/>
@@ -203,12 +211,14 @@
                             <constraint firstItem="8rr-iL-gjZ" firstAttribute="bottom" secondItem="fvK-Oo-H9X" secondAttribute="bottom" constant="20" id="fri-Zc-yt2"/>
                             <constraint firstAttribute="trailing" secondItem="ri3-TE-RbI" secondAttribute="trailing" id="ndR-tN-X4g"/>
                             <constraint firstItem="fvK-Oo-H9X" firstAttribute="centerX" secondItem="v0N-Jr-WG5" secondAttribute="centerX" id="qBd-mk-tdP"/>
+                            <constraint firstItem="g0r-Cl-9xI" firstAttribute="centerX" secondItem="a7r-YP-EDI" secondAttribute="centerX" id="r0E-yF-pJ4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8rr-iL-gjZ"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="DAJ-G5-Elp" id="gjg-U4-cqF"/>
                         <outlet property="profileImageBtn" destination="a7r-YP-EDI" id="dhc-NP-3T5"/>
+                        <outlet property="tickImg" destination="g0r-Cl-9xI" id="AwZ-Hy-I9A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPj-vn-TWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,5 +228,6 @@
     </scenes>
     <resources>
         <image name="logout-power" width="512" height="512"/>
+        <image name="tick-green" width="125" height="125"/>
     </resources>
 </document>
