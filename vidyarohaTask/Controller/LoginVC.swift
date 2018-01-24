@@ -15,10 +15,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        submitBtn.layer.cornerRadius = 5
-        submitBtn.clipsToBounds = true
-        
+        super.viewDidLoad()        
         userNameTextField.delegate = self
         passwordTextField.delegate = self
     }

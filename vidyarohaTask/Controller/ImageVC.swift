@@ -16,6 +16,8 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBOutlet weak var activityIndicator:NVActivityIndicatorView!
     var imagePicker = UIImagePickerController()
     
+    var gradientLayer: CAGradientLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageBtn.layer.cornerRadius = profileImageBtn.frame.width/2

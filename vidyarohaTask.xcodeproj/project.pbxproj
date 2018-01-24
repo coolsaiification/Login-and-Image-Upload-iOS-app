@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320AC6A22018B84400F170B8 /* CurvedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320AC6A12018B84400F170B8 /* CurvedButton.swift */; };
 		320D8E4F2017656D00EACE82 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D8E4E2017656D00EACE82 /* AuthService.swift */; };
+		32434DD320189CAB000B0412 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32434DD220189CAB000B0412 /* GradientView.swift */; };
 		32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C762015DA7F00B4CE61 /* AppDelegate.swift */; };
 		32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C782015DA7F00B4CE61 /* LoginVC.swift */; };
 		32A39C7C2015DA7F00B4CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7A2015DA7F00B4CE61 /* Main.storyboard */; };
@@ -19,7 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320AC6A12018B84400F170B8 /* CurvedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedButton.swift; sourceTree = "<group>"; };
 		320D8E4E2017656D00EACE82 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		32434DD220189CAB000B0412 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		32A39C732015DA7F00B4CE61 /* vidyarohaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vidyarohaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A39C762015DA7F00B4CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32A39C782015DA7F00B4CE61 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		32434DD120189C89000B0412 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32434DD220189CAB000B0412 /* GradientView.swift */,
+				320AC6A12018B84400F170B8 /* CurvedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		32A39C6A2015DA7E00B4CE61 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +88,7 @@
 		32A39C752015DA7F00B4CE61 /* vidyarohaTask */ = {
 			isa = PBXGroup;
 			children = (
+				32434DD120189C89000B0412 /* View */,
 				320D8E4D2017654500EACE82 /* Services */,
 				32DC5F9E20164554008F4CA8 /* Constants */,
 				32A39C882015DAE000B4CE61 /* Controller */,
@@ -254,7 +268,9 @@
 			files = (
 				32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */,
 				32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */,
+				32434DD320189CAB000B0412 /* GradientView.swift in Sources */,
 				320D8E4F2017656D00EACE82 /* AuthService.swift in Sources */,
+				320AC6A22018B84400F170B8 /* CurvedButton.swift in Sources */,
 				32DC5FA02016456E008F4CA8 /* GlobalConstants.swift in Sources */,
 				32DD46522015F06E005EF7C6 /* ImageVC.swift in Sources */,
 			);
