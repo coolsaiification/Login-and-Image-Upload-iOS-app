@@ -29,24 +29,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func submitBtnPressed(_ sender: Any) {
         if userNameTextField.text == "Sai" && passwordTextField.text == "123456"{
-            let defaults = UserDefaults.standard
-            defaults.set(userNameTextField.text, forKey: GlobalConstants.UserDefaultKeys.username)
-            defaults.synchronize()
-            setImageVCAsRootVC()
+            AuthService.instance.login(withUserName: userNameTextField.text!)
         }else{
             let alertController = UIAlertController(title: "Try Again", message: "Invalid username or password", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
-    }
-    
-    func setImageVCAsRootVC(){
-        //Open image screen
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let imageVc = storyboard.instantiateViewController(withIdentifier: "ImageVC")
-        appDelegate.window?.rootViewController = imageVc
-        appDelegate.window?.makeKeyAndVisible()
     }
     
     //Hide keyboard when return key pressed

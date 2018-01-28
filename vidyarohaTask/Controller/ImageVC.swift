@@ -41,21 +41,9 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     
     @IBAction func logoutBtnPressed(_ sender: Any) {
-        //Clear user defaults
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: GlobalConstants.UserDefaultKeys.username)
-        defaults.synchronize()
-        setLoginVCAsRootVC()
+        AuthService.instance.logout()
     }
-    
-    func setLoginVCAsRootVC(){
-        //Open login screen
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-        appDelegate.window?.rootViewController = loginVc
-        appDelegate.window?.makeKeyAndVisible()
-    }
+
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

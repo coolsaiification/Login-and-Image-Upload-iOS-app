@@ -11,6 +11,9 @@ import Alamofire
 
 class AuthService{
     static let instance = AuthService()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let defaults = UserDefaults.standard
     
     func uploadImage(image: UIImage, completion: @escaping(Bool)->()){
         let imgData = UIImageJPEGRepresentation(image, 0.2)!
@@ -32,5 +35,25 @@ class AuthService{
                 completion(false)
             }
         }
+    }
+    
+    func login(withUserName username:String){
+        //Set user defaults
+        defaults.set(username, forKey: GlobalConstants.UserDefaultKeys.username)
+        defaults.synchronize()
+        //Open image screen
+        let imageVc = storyboard.instantiateViewController(withIdentifier: "ImageVC")
+        appDelegate.window?.rootViewController = imageVc
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
+    func logout(){
+        //Clear user defaults
+        defaults.removeObject(forKey: GlobalConstants.UserDefaultKeys.username)
+        defaults.synchronize()
+        //Open login screen
+        let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        appDelegate.window?.rootViewController = loginVc
+        appDelegate.window?.makeKeyAndVisible()
     }
 }
