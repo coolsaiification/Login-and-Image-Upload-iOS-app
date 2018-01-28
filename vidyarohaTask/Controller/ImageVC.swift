@@ -67,6 +67,9 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
                     }
+                    let alertController = UIAlertController(title: "Try Again", message: "Image upload was unsuccessful", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController, animated: true, completion: nil)
                 }
                 
             })
