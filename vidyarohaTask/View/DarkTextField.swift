@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class DarkTextField: UITextField {
+//@IBDesignable
+class DarkTextField: UITextField {
     
     @IBInspectable var color: UIColor = UIColor.lightGray {
         didSet {

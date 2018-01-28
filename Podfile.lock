@@ -1,17 +1,23 @@
 PODS:
   - Alamofire (4.5.0)
+  - FontAwesome.swift (1.2.0)
   - NVActivityIndicatorView (3.7.0):
     - NVActivityIndicatorView/Presenter (= 3.7.0)
   - NVActivityIndicatorView/Presenter (3.7.0)
+  - SkyFloatingLabelTextField (3.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - FontAwesome.swift
   - NVActivityIndicatorView
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
   NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  SkyFloatingLabelTextField: 4e2d2f7160af660ed1da6bb9d0027b5c474b4b79
 
-PODFILE CHECKSUM: 384912d53c0e345d32265dd53d2c05150a3d5626
+PODFILE CHECKSUM: c7aa8071e21f599dd427ba7401dbe3d09b1586d0
 
 COCOAPODS: 1.3.1

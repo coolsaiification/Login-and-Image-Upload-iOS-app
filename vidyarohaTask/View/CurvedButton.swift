@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class CurvedButton: UIButton{
+//@IBDesignable
+class CurvedButton: UIButton{
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

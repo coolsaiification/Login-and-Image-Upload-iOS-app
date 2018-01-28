@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F80AD621323846C94DA3D39980DD9590"
-               BuildableName = "Pods_vidyarohaTask.framework"
-               BlueprintName = "Pods-vidyarohaTask"
+               BlueprintIdentifier = "CD11672B6619C297B6AEE3DFB8213C59"
+               BuildableName = "FontAwesome_swift.framework"
+               BlueprintName = "FontAwesome.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F80AD621323846C94DA3D39980DD9590"
-            BuildableName = "Pods_vidyarohaTask.framework"
-            BlueprintName = "Pods-vidyarohaTask"
+            BlueprintIdentifier = "CD11672B6619C297B6AEE3DFB8213C59"
+            BuildableName = "FontAwesome_swift.framework"
+            BlueprintName = "FontAwesome.swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

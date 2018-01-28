@@ -6,7 +6,9 @@ target 'vidyarohaTask' do
   use_frameworks!
   pod 'NVActivityIndicatorView'
   pod 'Alamofire'
-
-  # Pods for vidyarohaTask
+  pod 'SkyFloatingLabelTextField', '~> 3.0
+  
+  platform :ios, '8.0'
+  pod 'FontAwesome.swift'
 
 end

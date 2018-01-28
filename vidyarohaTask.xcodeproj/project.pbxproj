@@ -10,7 +10,6 @@
 		320AC6A22018B84400F170B8 /* CurvedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320AC6A12018B84400F170B8 /* CurvedButton.swift */; };
 		320D8E4F2017656D00EACE82 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D8E4E2017656D00EACE82 /* AuthService.swift */; };
 		32434DD320189CAB000B0412 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32434DD220189CAB000B0412 /* GradientView.swift */; };
-		32870DF02018DFFC00C0916E /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32870DEF2018DFFC00C0916E /* DarkTextField.swift */; };
 		32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C762015DA7F00B4CE61 /* AppDelegate.swift */; };
 		32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A39C782015DA7F00B4CE61 /* LoginVC.swift */; };
 		32A39C7C2015DA7F00B4CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7A2015DA7F00B4CE61 /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 		320AC6A12018B84400F170B8 /* CurvedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedButton.swift; sourceTree = "<group>"; };
 		320D8E4E2017656D00EACE82 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		32434DD220189CAB000B0412 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		32870DEF2018DFFC00C0916E /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		32A39C732015DA7F00B4CE61 /* vidyarohaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vidyarohaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A39C762015DA7F00B4CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32A39C782015DA7F00B4CE61 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			children = (
 				32434DD220189CAB000B0412 /* GradientView.swift */,
 				320AC6A12018B84400F170B8 /* CurvedButton.swift */,
-				32870DEF2018DFFC00C0916E /* DarkTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,12 +247,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32A39C792015DA7F00B4CE61 /* LoginVC.swift in Sources */,
-				32870DF02018DFFC00C0916E /* DarkTextField.swift in Sources */,
 				32A39C772015DA7F00B4CE61 /* AppDelegate.swift in Sources */,
 				32434DD320189CAB000B0412 /* GradientView.swift in Sources */,
 				320D8E4F2017656D00EACE82 /* AuthService.swift in Sources */,

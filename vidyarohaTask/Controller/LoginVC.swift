@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import FontAwesome_swift
 
 class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var submitBtn: UIButton!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var userNameTextField: SkyFloatingLabelTextFieldWithIcon!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
     
     override func viewDidLoad() {
         super.viewDidLoad()        
         userNameTextField.delegate = self
+        userNameTextField.iconFont = UIFont.fontAwesome(ofSize: 20)
+        userNameTextField.iconText = String.fontAwesomeIcon(name: .userCircle)
         passwordTextField.delegate = self
+        passwordTextField.iconFont = UIFont.fontAwesome(ofSize: 20)
+        passwordTextField.iconText = String.fontAwesomeIcon(name: .lock)
     }
     
 
