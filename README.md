@@ -5,5 +5,7 @@ iOS app with login functionality and image upload using Alamofire image.
 * Username = "Sai"
 * Password = "123456"
 
-## Configuring 
-Change upload image url inside GlobalConstants
+## Setting up server for uploading image 
+1. cd to uploadImage 
+2. Install node using command __"brew install node"__
+3. Execute command __"node server"__ 
