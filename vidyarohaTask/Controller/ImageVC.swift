@@ -71,9 +71,8 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
                 print("Response received")
                 var title:String = "Try Again"
-                var msg:String = "mage upload was unsuccessful"
+                var msg:String = "Image upload was unsuccessful"
                 if success{
-                    print("Image upload successful")
                     title = "Success"
                     msg = "Image upload was successful"
                     DispatchQueue.main.async {
@@ -81,7 +80,6 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                         self.activityIndicator.stopAnimating()
                     }
                 }else{
-                    print("Image upload unsuccessful")
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
                     }
