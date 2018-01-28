@@ -17,6 +17,7 @@
 		32A39C812015DA7F00B4CE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A39C7F2015DA7F00B4CE61 /* LaunchScreen.storyboard */; };
 		32DC5FA02016456E008F4CA8 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC5F9F2016456E008F4CA8 /* GlobalConstants.swift */; };
 		32DD46522015F06E005EF7C6 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DD46512015F06E005EF7C6 /* ImageVC.swift */; };
+		32E5DAE1201E325600BBF0E3 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E5DAE0201E325600BBF0E3 /* ButtonExtensions.swift */; };
 		9908CA6A0D8A224AFAF28EDC /* Pods_vidyarohaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46988666C97AFDF7D3EB1E9B /* Pods_vidyarohaTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		32A39C822015DA7F00B4CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32DC5F9F2016456E008F4CA8 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		32DD46512015F06E005EF7C6 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		32E5DAE0201E325600BBF0E3 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		46988666C97AFDF7D3EB1E9B /* Pods_vidyarohaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vidyarohaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B76D75F815C2E37B857E63 /* Pods-vidyarohaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vidyarohaTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask.release.xcconfig"; sourceTree = "<group>"; };
 		9AD061B4E23CB05932CFF8A6 /* Pods-vidyarohaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vidyarohaTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vidyarohaTask/Pods-vidyarohaTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				32434DD220189CAB000B0412 /* GradientView.swift */,
 				320AC6A12018B84400F170B8 /* CurvedButton.swift */,
+				32E5DAE0201E325600BBF0E3 /* ButtonExtensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				32434DD320189CAB000B0412 /* GradientView.swift in Sources */,
 				320D8E4F2017656D00EACE82 /* AuthService.swift in Sources */,
 				320AC6A22018B84400F170B8 /* CurvedButton.swift in Sources */,
+				32E5DAE1201E325600BBF0E3 /* ButtonExtensions.swift in Sources */,
 				32DC5FA02016456E008F4CA8 /* GlobalConstants.swift in Sources */,
 				32DD46522015F06E005EF7C6 /* ImageVC.swift in Sources */,
 			);

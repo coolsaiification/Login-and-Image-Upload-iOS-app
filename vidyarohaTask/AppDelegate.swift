@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if defaults.string(forKey: GlobalConstants.UserDefaultKeys.username) == nil{
             self.window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-            self.window?.rootViewController = initialViewController
+            let loginVC = storyboard.instantiateViewController(withIdentifier: GlobalConstants.VCIdentifiers.loginVC)
+            self.window?.rootViewController = loginVC
             self.window?.makeKeyAndVisible()
         }
         return true

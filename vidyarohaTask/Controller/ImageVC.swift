@@ -34,17 +34,16 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum;
             imagePicker.allowsEditing = false
-            
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
     
-    @IBAction func logoutBtnPressed(_ sender: Any) {
-        AuthService.instance.logout()
+    @IBAction func logoutBtnPressed(_ sender: UIButton) {
+        sender.scaleAnimation {
+            AuthService.instance.logout()
+        }
     }
-
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: nil)
