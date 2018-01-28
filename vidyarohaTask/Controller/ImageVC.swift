@@ -62,19 +62,25 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         self.dismiss(animated: true, completion: nil)
         //set button image
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            activityIndicator.startAnimating()
-            tickImg.isHidden = true
+            self.activityIndicator.startAnimating()
+            self.tickImg.isHidden = true
             profileImageBtn.setImage(pickedImage, for: .normal)
             //Upload image to server
             AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
-                self.activityIndicator.stopAnimating()
-                
+                print("Response received")
                 if success{
                     print("Image upload successful")
-                    self.tickImg.isHidden = false
+                    DispatchQueue.main.async {
+                        self.tickImg.isHidden = false
+                        self.activityIndicator.stopAnimating()
+                    }
                 }else{
                     print("Image upload unsuccessful")
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                    }
                 }
+                
             })
         }
     }

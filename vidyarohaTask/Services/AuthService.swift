@@ -21,12 +21,11 @@ class AuthService{
             switch result {
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    print(response)
-                    //Delay for testing activity indicator and tick
-                    let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+                    if response.result.error != nil{
+                        completion(false)
+                    } else{
                         completion(true)
                     }
-                    RunLoop.current.add(timer, forMode: .commonModes)
                 }
             case .failure(let encodingError):
                 print(encodingError)

@@ -13,6 +13,6 @@ class GlobalConstants {
         static let username = "username"
     }
     struct api{
-        static let uploadImage = "localhost:5000/uploadImage"
+        static let uploadImage = "https://facebook.com/uploadImage"
     }
 }
