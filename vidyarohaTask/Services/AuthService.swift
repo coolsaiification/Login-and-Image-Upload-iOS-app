@@ -17,7 +17,7 @@ class AuthService{
     
     func uploadImage(image: UIImage, completion: @escaping(Bool)->()){
         let imgData = UIImageJPEGRepresentation(image, 0.2)!
-        let url = GlobalConstants.api.uploadImage
+        let url = GlobalConstants.Api.uploadImage
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
         }, to: url) { result in
@@ -42,7 +42,7 @@ class AuthService{
         defaults.set(username, forKey: GlobalConstants.UserDefaultKeys.username)
         defaults.synchronize()
         //Open image screen
-        let imageVc = storyboard.instantiateViewController(withIdentifier: "ImageVC")
+        let imageVc = storyboard.instantiateViewController(withIdentifier: GlobalConstants.VCIdentifiers.imageVC)
         appDelegate.window?.rootViewController = imageVc
         appDelegate.window?.makeKeyAndVisible()
     }
@@ -52,7 +52,7 @@ class AuthService{
         defaults.removeObject(forKey: GlobalConstants.UserDefaultKeys.username)
         defaults.synchronize()
         //Open login screen
-        let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        let loginVc = storyboard.instantiateViewController(withIdentifier: GlobalConstants.VCIdentifiers.loginVC)
         appDelegate.window?.rootViewController = loginVc
         appDelegate.window?.makeKeyAndVisible()
     }

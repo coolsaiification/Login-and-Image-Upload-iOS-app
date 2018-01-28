@@ -12,7 +12,11 @@ class GlobalConstants {
     struct UserDefaultKeys{
         static let username = "username"
     }
-    struct api{
+    struct Api {
         static let uploadImage = "https://facebook.com/uploadImage"
+    }
+    struct VCIdentifiers {
+        static let loginVC = "LoginVC"
+        static let imageVC = "ImageVC"
     }
 }
