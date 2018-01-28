@@ -42,7 +42,22 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBAction func logoutBtnPressed(_ sender: UIButton) {
         sender.scaleAnimation {
             AuthService.instance.logout()
+            self.presentLoginScreen()
         }
+    }
+    
+    func presentLoginScreen(){
+        //Open login screen
+        guard let window = UIApplication.shared.keyWindow else { return }
+        guard let rootViewController = window.rootViewController else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVc = storyboard.instantiateViewController(withIdentifier: GlobalConstants.VCIdentifiers.loginVC)
+        loginVc.view.frame = rootViewController.view.frame
+        loginVc.view.layoutIfNeeded()
+        //Animate transition
+        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromLeft, animations: {
+            window.rootViewController = loginVc
+        })
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

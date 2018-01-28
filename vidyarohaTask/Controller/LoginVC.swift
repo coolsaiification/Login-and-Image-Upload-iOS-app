@@ -37,12 +37,28 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         sender.scaleAnimation {
             if self.userNameTextField.text == "Sai" && self.passwordTextField.text == "123456"{
                 AuthService.instance.login(withUserName: self.userNameTextField.text!)
+                self.presentImageScreen()
             }else{
                 let alertController = UIAlertController(title: "Try Again", message: "Invalid username or password", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+    }
+    
+    
+    func presentImageScreen(){
+        //Open image screen
+        guard let window = UIApplication.shared.keyWindow else { return }
+        guard let rootViewController = window.rootViewController else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let imageVc = storyboard.instantiateViewController(withIdentifier: GlobalConstants.VCIdentifiers.imageVC)
+        imageVc.view.frame = rootViewController.view.frame
+        imageVc.view.layoutIfNeeded()
+        //Animate transition
+        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            window.rootViewController = imageVc
+        })
     }
     
     //Hide keyboard when return key pressed
