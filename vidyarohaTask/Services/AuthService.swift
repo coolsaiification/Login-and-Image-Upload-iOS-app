@@ -17,11 +17,12 @@ class AuthService{
         let imgData = UIImageJPEGRepresentation(image, 0.2)!
         let url = GlobalConstants.Api.uploadImage
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
+            multipartFormData.append(imgData, withName: "sampleFile",fileName: "sampleFile", mimeType: "image/jpg")
         }, to: url) { result in
             switch result {
             case .success(let upload, _, _):
-                upload.responseJSON { response in
+                upload.responseString { response in
+                    print(response)
                     if response.result.error != nil{
                         completion(false)
                     } else{

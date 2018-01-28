@@ -70,8 +70,12 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             //Upload image to server
             AuthService.instance.uploadImage(image: pickedImage, completion: { (success) in
                 print("Response received")
+                var title:String = "Try Again"
+                var msg:String = "mage upload was unsuccessful"
                 if success{
                     print("Image upload successful")
+                    title = "Success"
+                    msg = "Image upload was successful"
                     DispatchQueue.main.async {
                         self.tickImg.isHidden = false
                         self.activityIndicator.stopAnimating()
@@ -81,10 +85,10 @@ class ImageVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
                     }
-                    let alertController = UIAlertController(title: "Try Again", message: "Image upload was unsuccessful", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                    self.present(alertController, animated: true, completion: nil)
                 }
+                let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
                 
             })
         }

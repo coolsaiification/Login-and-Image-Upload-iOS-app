@@ -13,7 +13,7 @@ class GlobalConstants {
         static let username = "username"
     }
     struct Api {
-        static let uploadImage = "https://facebook.com/uploadImage"
+        static let uploadImage = "http://localhost:5000/upload"
     }
     struct VCIdentifiers {
         static let loginVC = "LoginVC"
